@@ -7,13 +7,15 @@ export default function CampoDeTexto( { nomeInput, placeholder, campoDeSenha } )
   return (
     <View style={styles.container}>
       <Text style={styles.nomeInput}>{nomeInput || 'Label padrão'}</Text>
+
       <TextInput
         style={styles.input}
         placeholder={placeholder || 'Digite algo...'}
-        secureTextEntry={campoDeSenha || false}
+        secureTextEntry={campoDeSenha}
         value={text}
         onChangeText={setText} 
       />
+      
     </View>
   );
 }

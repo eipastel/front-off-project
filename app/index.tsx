@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native";
-import Login from "../components/Login";
+import Login from "../pages/Login";
 
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Login></Login>
+      <Login/>
     </View>
   );
 }
