@@ -1,15 +1,17 @@
-import {View, Image, StyleSheet, } from "react-native";
+import React from "react";
+
+import { View, Image, StyleSheet } from "react-native";
 import { ReferenciaImagens } from "../assets/ReferenciasImagens";
 import { Cores } from "../colors/Cores";
 import TituloAnimado from "../components/TituloAnimado";
 import CampoDeTexto from "../components/CampoDeTexto";
 import Botao from "../components/Botao";
 
-export default function Login() {
+export default function PaginaLogin() {
   return (
       <View style={styles.container}>
 
-        <TituloAnimado/>
+        <TituloAnimado />
 
         <Image source={ReferenciaImagens.login} style={styles.image}/>
 
