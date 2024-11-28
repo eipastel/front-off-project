@@ -1,9 +1,8 @@
 import React from "react";
 
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Text } from "react-native";
 import { ReferenciaImagens } from "../assets/ReferenciasImagens";
 import { Cores } from "../colors/Cores";
-import TituloAnimado from "../components/TituloAnimado";
 import CampoDeTexto from "../components/CampoDeTexto";
 import Botao from "../components/Botao";
 
@@ -11,9 +10,13 @@ export default function PaginaLogin() {
   return (
       <View style={styles.container}>
 
-        <TituloAnimado />
+        {/* TODO: trocar a imagem e inserir um texto de "que bom te ver novamente" */}
+        <Image source={ReferenciaImagens.BEM_VINDO} style={styles.image}/>
 
-        <Image source={ReferenciaImagens.login} style={styles.image}/>
+        <View style={styles.containerTexto}>
+          <Text style={styles.titulo}>Olá novamente</Text>
+          <Text style={styles.subtitulo}>continue controlando seus gastos.</Text>  
+        </View>
 
         <View style={styles.camposInteragiveis}>
 
@@ -47,21 +50,24 @@ export default function PaginaLogin() {
 
 const styles = StyleSheet.create({
     container: {
-      paddingHorizontal: 20,
-      paddingVertical: 5,
+      justifyContent: "center",
+      alignItems: "center",
     },
     containerTitulo: {
       alignSelf: 'center',
       alignItems: 'center',
       marginBottom: 20,
     },
+    containerTexto: {
+      marginVertical: 20,
+    },
     titulo: {
-      fontSize: 64,
+      fontSize: 38,
       fontWeight: "bold",
       textAlign: 'center',
     },
     subtitulo: {
-      fontSize: 36,
+      fontSize: 20,
       color: "#38434D",
       textAlign: 'center',
     },
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     camposInteragiveis: {
-      width: 400,
+      width: '100%',
     },
     crieSuaContaTexto : {
       width: '100%',
@@ -79,4 +85,4 @@ const styles = StyleSheet.create({
       fontSize: 18,
       color: Cores.padroes.preto,
     },
-    });
+  });

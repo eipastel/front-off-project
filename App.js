@@ -1,11 +1,22 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import BottomTabNavigator from './navigation/BottomTabNavigator';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import BarraDeNavegacao from './src/navigation/BarraDeNavegacao';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <BottomTabNavigator />
+    <NavigationContainer
+      theme={{
+        ...DefaultTheme,
+        colors: {
+          ...DefaultTheme.colors,
+          background: 'white',
+        },
+      }}
+    >
+
+      <BarraDeNavegacao />
+
     </NavigationContainer>
   );
 }
+
