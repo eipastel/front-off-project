@@ -3,6 +3,10 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function Botao({ acao, titulo, corFundoProp, exibeFundo, corTextoProp, ajustaAoTexto }) {
 
+  //TODO: validar se precisa mesmo dessa validação (parece redundante)
+  //por padrão é true 
+  exibeFundo = exibeFundo ?? true
+
   const corFundo = exibeFundo ? corFundoProp : 'transparent'
   const corTexto = corTextoProp ?? 'white'
 

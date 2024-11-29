@@ -10,7 +10,6 @@ export default function PaginaLogin() {
   return (
       <View style={styles.container}>
 
-        {/* TODO: trocar a imagem e inserir um texto de "que bom te ver novamente" */}
         <Image source={ReferenciaImagens.BEM_VINDO} style={styles.image}/>
 
         <View style={styles.containerTexto}>

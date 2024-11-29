@@ -5,8 +5,11 @@ export default function CampoDeTexto( { nomeInput, placeholder, campoDeSenha } )
   const [text, setText] = useState('');
 
   return (
+
+    //TODO: enriquecer o componente com proprs dinamicas
+
     <View style={styles.container}>
-      <Text style={styles.nomeInput}>{nomeInput || 'Label padrão'}</Text>
+      <Text style={styles.nomeInput}>{nomeInput}</Text>
 
       <TextInput
         style={styles.input}

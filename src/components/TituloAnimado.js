@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { StyleSheet, View, Text, Animated } from "react-native";
 
 export default function TituloAnimado() {
+
+  //TODO: passar a escrita por props para ser mais dinâmico
+
   const tituloAnim = useRef(new Animated.Value(500)).current; 
   const subtituloAnim = useRef(new Animated.Value(500)).current;
 

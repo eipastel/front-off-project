@@ -6,4 +6,7 @@ export const Cores = {
     vermelho: '#FF6B6B',   
     roxoEscuro: '#413C58',
   },
+  escuro: {
+    
+  }
 };
